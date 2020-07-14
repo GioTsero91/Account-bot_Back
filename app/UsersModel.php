@@ -16,12 +16,12 @@ class UsersModel extends Model
     protected $fillable = [
         'fname', 'lname', 'username', 'password', 'email'
     ];
+    protected $hidden = ['password'];
 
     /**
      * The attributes excluded from the model's JSON form.
      *
      * @var array
      */
-    protected $hidden = [];
 
 }
