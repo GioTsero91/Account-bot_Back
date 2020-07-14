@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserModel extends Model
+class UsersModel extends Model
 {
 
     /**
@@ -12,8 +12,9 @@ class UserModel extends Model
      *
      * @var array
      */
+    protected $table = "users";
     protected $fillable = [
-        'name', 'email', 'github', 'twitter', 'location', 'latest_article_published'
+        'fname', 'lname', 'username', 'password', 'email'
     ];
 
     /**
@@ -22,4 +23,5 @@ class UserModel extends Model
      * @var array
      */
     protected $hidden = [];
+
 }
